@@ -74,3 +74,25 @@ for(const call of callButtons){
         
     })
 }
+
+
+// Copy section
+
+const copyButtonCollection = document.querySelectorAll(".copy-button");
+
+for(const copyButton of copyButtonCollection){
+    copyButton.addEventListener("click",function(){
+
+        const copyNumElement = document.getElementById("copyNum");
+        var copyNum = Number(copyNumElement.innerHTML);
+
+        copyNum++;
+
+        copyNumElement.innerText = copyNum;
+
+        
+        const number = copyButton.parentNode.parentNode.children[2].children[0].innerText;
+        navigator.clipboard.writeText(number);
+        alert("নম্বর কপি হয়েছে : " + number)
+    })
+}
