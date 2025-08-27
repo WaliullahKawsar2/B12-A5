@@ -11,3 +11,17 @@ for(const heart of heartIcons){
         heartCountElement.innerText = heartCount;
     })
 }
+
+// Coin Count
+
+const coinElement = document.getElementById("coin-count");
+console.log(coinElement);
+var coinCount = Number(coinElement.innerText);
+
+const callButtons = document.querySelectorAll(".call-button");
+for(const call of callButtons){
+    call.addEventListener("click",function(){
+        coinCount-=20;
+        coinElement.innerText = coinCount;
+    })
+}
