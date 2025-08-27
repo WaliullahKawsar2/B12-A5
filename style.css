@@ -9,12 +9,11 @@
     font-family: "Roboto", sans-serif;
 }
 
-.flex{
-    display: flex;
+.cusrsor{
+    cursor: pointer;
 }
 
 body{
-    
     background: #f5fff6;
 }
 /* Navbar */
@@ -96,12 +95,13 @@ main{
     margin: 40px auto;
     display: flex;
     max-width: 1440px;
-    gap: 30px;
+    gap: 20px;
 }
 .card-container{
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    gap: 30px;
+    gap: 20px;
+    flex-grow: 3;
 }
 
 .card{
@@ -122,6 +122,9 @@ main{
 }
 .card-images img{
     width: 50px;
+}
+.card-images i{
+    cursor: pointer;
 }
 
 .card-title{
@@ -160,6 +163,7 @@ main{
     padding-bottom: 10px;
     border-radius: 8px;
     border: 1px solid #F2F2F2;
+    cursor: pointer;
 }
 
 .call-button{
@@ -169,7 +173,11 @@ main{
     padding-bottom: 11px;
     border-radius: 8px;
     flex-grow: 1;
+    cursor: pointer;
 }
+
+
+/* History */
 
 .history-area{
     background-color: white;
@@ -184,6 +192,7 @@ main{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 16px;
 }
 
 .call-history-text{
@@ -195,4 +204,24 @@ main{
     background-color: #00A63E;
     padding: 8px 20px;
     border-radius: 50px;
+    cursor: pointer;
+}
+
+.history-container{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.history{
+    background-color: #FAFAFA;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    border-radius: 8px;
+}
+
+.history-text p{
+    color: #5C5C5C;
 }
