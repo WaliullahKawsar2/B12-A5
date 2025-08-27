@@ -39,6 +39,7 @@ function historyShow(){
 document.getElementById("clear-btn").addEventListener("click",function(){
     document.getElementById("history-container").innerHTML = ' '
 })
+
 // Coin Count
 
 const coinElement = document.getElementById("coin-count");
@@ -47,18 +48,29 @@ var coinCount = Number(coinElement.innerText);
 const callButtons = document.querySelectorAll(".call-button");
 for(const call of callButtons){
     call.addEventListener("click",function(){
-        
-        const text = call.parentNode.parentNode.children[1].children[0].innerText;
+        const serviceName = call.parentNode.parentNode.children[1].children[0].innerText;
+        const service = call.parentNode.parentNode.children[1].children[0].innerText;
         const number = call.parentNode.parentNode.children[2].children[0].innerText;
+        
+        
+        if(coinCount - 20 < 0){
+            alert("❌ আপনার পর্যাপ্ত কয়েন নেই। কল করতে কমপক্ষে ২০ কয়েন লাগবে।")
+            return;
+        }
+        
+        alert("📞 Calling " + service + ' ' + number + "...")
+        coinCount-=20;
+        coinElement.innerText = coinCount;
+
+        
         const data = {
-        title : text,
+        title : serviceName,
         number : number,
         time : new Date().toLocaleTimeString()
         }
 
         history.push(data);
         historyShow();
-        coinCount-=20;
-        coinElement.innerText = coinCount;
+        
     })
 }
