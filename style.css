@@ -1,0 +1,62 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@300;400;500;600;700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Universal */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+.flex{
+    display: flex;
+}
+/* Navbar */
+.nav-bar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 60px;
+}
+.name-logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo{
+    height: 50px;
+}
+.name{
+    display: flex;
+    flex-direction: column;
+    font-weight: 500;
+    font-size: 1.2rem;
+    color: #006747;
+}
+.count-side{
+    display: flex;
+    gap: 1.2rem;
+}
+.count-side div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    background-color: #41ff6a1c;
+    padding: 8px 20px;
+    border-radius: 50px;
+    font-weight: bold;
+}
+
+.count-side img{
+    width: 1.5rem;
+}
+
+.count-side .copy-btn{
+    color: white;
+    background-color: #00A63E;
+    font-weight: 400;
+}
